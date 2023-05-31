@@ -29,7 +29,7 @@ https://templatemo.com/tm-545-finance-business
 -->
   </head>
 
-  <body>
+  <body class="bg-dark">
 
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
@@ -74,18 +74,22 @@ https://templatemo.com/tm-545-finance-business
             <ul class="navbar-nav ml-auto">
 
             <li class="nav-item">
-                <a class="nav-link" href="{{url('landing')}}">Home</a>
+                <a class="nav-link" href="{{url('lending')}}">Home</a>
               </li>  
+            @auth
             <li class="nav-item active">
               <div class="dropdown">
                 <button class="btn btn-transparent dropdown-toggle nav-link" style="color: white;outline:none; background-color: transparent" type="button" data-toggle="dropdown">Dashboard
                 <span class=" caret"></span></button>
                 <ul class="dropdown-menu">
-                  <li><a style="color:greenyellow" href="{{url('dashboard')}}">Produk</a></li>
-                  <li><a style="color:greenyellow" href="{{url('dashboard')}}">Pengguna</a></li>
+                  <li><a style="color:greenyellow" href="{{url('category')}}">Produk Kategori</a></li>
+                  <li><a style="color:greenyellow" href="{{url('dproduk')}}">Daftar Produk</a></li>
+                  <li><a style="color:greenyellow" href="{{url('grup')}}"> Grup Pengguna</a></li>
+                  <li><a style="color:greenyellow" href="{{url('pengguna')}}">DaftarPengguna</a></li>
                 </ul>
               </div>
               </li>
+              @endauth
 
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About Us</a>
@@ -94,7 +98,7 @@ https://templatemo.com/tm-545-finance-business
                 <a class="nav-link" href="services.html">Our Services</a>
               </li>                          
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a role = "button" href="{{url('login')}}" class="nav-link text-dark" style="background-color: greenyellow; border-radius:1em" href="{{url('\login')}}">Login</a>
               </li>
            
             </ul>
@@ -113,9 +117,22 @@ https://templatemo.com/tm-545-finance-business
             <div class="img-fill">
                 <div class="text-content">
                   <h6>Hallo. Selamat Datang</h6>
-                  <h4>Ini Tugasnya<br> {{$namamhs}}</h4>
-                  <p>{{$deskripsi}}</p>
-                  <a href="{{url('dashboard')}}" class="filled-button">Lihat Dashboard</a>
+                  <h4>Ini Tugasnya<br> Tantan</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                  <a href="{{url('category')}}" class="filled-button">Lihat Dashboard</a>
+                </div>
+            </div>
+          </div>
+          <!-- // Item -->
+
+          <!-- Item -->
+                    <div class="item item-1">
+            <div class="img-fill">
+                <div class="text-content">
+                  <h6>Haiii. Selamat Datang</h6>
+                  <h4>Ikhtiar Untuk Segalanya</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                  <a href="{{url('category')}}" class="filled-button">Lihat Dashboard</a>
                 </div>
             </div>
           </div>
@@ -123,6 +140,32 @@ https://templatemo.com/tm-545-finance-business
       
         </div>
     </div>
+    
+    <!-- Item -->
+    <div class="container p-5 bg-dark">
+                    
+                      <h4 class="text-center text-light m-4 p-2">Daftar Produk</h4>
+                      <div class="d-flex mx-auto">
+                            
+                            @forelse($dproduk as $d)
+                           
+                              <div class="card mb-4 mx-4 " style="width: 18rem;">
+                                <img src="https://preview.webpixels.io/quick-website-ui-kit/assets/img/theme/light/placeholder.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$d->nama_produk}}</h5>
+                                    <p class="card-text">{{$d->kategori}}<br>Rp. {{$d->harga}}</p>
+                                    <a href="#" class="btn btn-primary">Beli</a>
+                                </div>
+                                </div>
+                              @empty
+                              <p>Data Tidak Ada</p>
+
+                              @endforelse
+                          
+                          </div>
+                    
+                
+        </div>
 
     <!-- Footer Starts Here -->
     <footer>

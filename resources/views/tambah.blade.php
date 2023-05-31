@@ -16,7 +16,7 @@
             
             <div>
             <label for="name">Nama</label><br>
-            <input style="width: 100%" type="text" id="name" name = "name" placeholder="Masukan Nama Lengkap" required>
+            <input style="width: 100%" type="text" id="name" name = "name" placeholder="Nama Lengkap" required>
             <br>
             <br>
             </div>
@@ -33,7 +33,7 @@
             <div class="col">
             <label for="password">Password</label><br>
             
-            <input  style="width: 63%" type="password" id="password" name = "password" placeholder="********" required>
+            <input  style="width: 63%" type="password" id="password" name = "password" placeholder="Recipient's username" required>
             <a  id ="see" style="width: 5em; color:white" onclick="seeFunction()" class="col btn btn-primary form-control my-2 mx-2" role="button">Lihat</a>
             <br>
             <br>
@@ -55,14 +55,14 @@
             <div class="d-flex flex-coloumn">
             <div class="col">
             <label for="email">Email</label><br>
-            <input style="width: 90%" type="email" id="email" name = "email" placeholder="name@gmail.com" required>
+            <input style="width: 90%" type="email" id="email" name = "email" placeholder="name@example.com" required>
             <br>
             <br>
             </div>
 
             <div class="col">
-            <label for="phone">No Telp</label><br>
-            <input style="width: 100%" type="text" id="phone" name = "phone" placeholder="+62 838********" required>
+            <label for="phone">Telp</label><br>
+            <input style="width: 100%" type="text" id="phone" name = "phone" placeholder="083995226351 required>
             <br>
             <br>
             </div>
@@ -77,7 +77,7 @@
             </div>
 
             <div>
-            <label for="avatar">Unggah Foto</label><br>
+            <label for="avatar">Unggah Fhoto</label><br>
             <input style="width: 100%" type="file" id="avatar" name = "avatar" required>
             <br>
             <br>

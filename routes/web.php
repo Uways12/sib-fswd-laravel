@@ -9,6 +9,11 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DprodukController;
 use App\Http\Controllers\GrupController;
 use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\TgamController;
+use App\Http\Controllers\LendingController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +31,7 @@ use App\Http\Controllers\PenggunaController;
 // });
 
 // Route::get('/home', function () {
-//     return 'Bismiilah Tantan Selalu diberi Kemudahan dalam belajar PHP';
+//     return 'Ikhtiar Untuk Segalanya';
 // });
 
 // Route::redirect('/nama', 'home');
@@ -43,7 +48,7 @@ Route::fallback(function(){
 //     return 'Nama Barang : '.$namaItem; 
 // });
 
-//Tugas Pert 22
+//Tugas_22
 Route::get('/tampil', [UserController::class, 'tampilin'] );
 
 Route::get('/tambah', [UserController::class, 'tambahin'] );
@@ -53,19 +58,19 @@ Route::get('/edit', [UserController::class, 'editin']);
 Route::get('/detail', [UserController::class, 'detailin']);
 
 
-//Pert 23 view
+//Tugas_23 view
 Route::get('/product', [ProdukController::class, 'index']);
 
 Route::get('/productlist', [ProdukController::class, 'index']);
 
-//Tugas Pert 23 view
+//Tugas_23 view
 
 Route::get('/landing', [ProdukController::class, 'index']);
 
 Route::get('/dashboard', [ProdukController::class, 'index2']);
 
 
-//Pert 24 
+//Tugas_24 
 Route::get('/customer', [CustomerController::class, 'index']);
 Route::get('/customer-create', [CustomerController::class, 'create']);
 Route::post('/customer-store', [CustomerController::class, 'store']);
@@ -73,7 +78,7 @@ Route::post('/customer-store', [CustomerController::class, 'store']);
 Route::get('/customer-edit/{id}', [CustomerController::class, 'edit']);
 Route::put('/customer-update', [CustomerController::class, 'update']);
 
-//Tugas Pert 24
+//Tugas_24
 
 //Category
 //Read
@@ -128,3 +133,20 @@ Route::get('/pengguna-edit/{id}', [PenggunaController::class, 'edit']);
 Route::put('/pengguna-update', [PenggunaController::class, 'update']);
 //Delete
 Route::get('/pengguna-delete/{id}', [PenggunaController::class, 'delete']);
+
+
+Route::get('/tgam', [TgamController::class, 'index']);
+Route::get('/tgam-create', [TgamController::class, 'create']);
+Route::post('/tgam-store', [TgamController::class, 'store']);
+
+
+//Tugas_25
+Route::get('/lending', [LendingController::class, 'index']);
+Route::get('/lending', [DprodukController::class, 'index2']);
+
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);

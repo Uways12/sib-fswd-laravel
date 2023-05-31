@@ -14,10 +14,10 @@
             <div class = "card-body">
         <form action="edit_pengguna_func.php" method="post" enctype="multipart/form-data">
             
-            <input type="hidden" value="<?php echo 'id'?>" name="id">
+            <input type="hidden" value="<?php echo $row['id'];?>" name="id">
             <div>
             <label for="name">Nama</label><br>
-            <input style="width: 100%" type="text" id="name" name = "name" value="<?php echo 'Uways'?>" placeholder="Nama Lengkap" required>
+            <input style="width: 100%" type="text" id="name" name = "name" value="<?php echo $row['name'];?>" placeholder="Nama Lengkap" required>
             <br>
             <br>
             </div>
@@ -25,7 +25,7 @@
             <div class="d-flex flex-coloumn">
             <div class="col">
             <label  for="role">Role Pengguna</label> <br> 
-            <select  class="my-2" style="width: 90%; height :30%" name="role" value="<?php echo 'Admin'?>" id="role" placeholder="Pilih Role Pengguna">
+            <select  class="my-2" style="width: 90%; height :30%" name="role" value="<?php echo $row['role'];?>" id="role" placeholder="Pilih Role Pengguna">
                 <option value="admin">Admin</option>
                 <option value="staff">Staff</option>
             </select>
@@ -34,7 +34,7 @@
             <div class="col">
             <label for="password">Password</label><br>
             
-            <input  style="width: 63%" type="password" id="password" name = "password" value="<?php echo 'password'?>" placeholder="********" required>
+            <input  style="width: 63%" type="password" id="password" name = "password" value="<?php echo $row['password'];?>" placeholder="Recipient's username" required>
             <a  id ="see" style="width: 5em; color:white" onclick="seeFunction()" class="col btn btn-primary form-control my-2 mx-2" role="button">Lihat</a>
             <br>
             <br>
@@ -56,14 +56,14 @@
             <div class="d-flex flex-coloumn">
             <div class="col">
             <label for="email">Email</label><br>
-            <input style="width: 90%" type="email" id="email" name = "email" value="<?php echo 'uwaysq4@gmail.com'?>" placeholder="name@example.com" required>
+            <input style="width: 90%" type="email" id="email" name = "email" value="<?php echo $row['email'];?>" placeholder="name@example.com" required>
             <br>
             <br>
             </div>
 
             <div class="col">
-            <label for="phone">No Telp</label><br>
-            <input style="width: 100%" type="text" id="phone" name = "phone" value="<?php echo '083895226351'?>" placeholder="08967565" required>
+            <label for="phone">Telp</label><br>
+            <input style="width: 100%" type="text" id="phone" name = "phone" value="<?php echo $row['phone'];?>" placeholder="083895226351" required>
             <br>
             <br>
             </div>
@@ -72,13 +72,13 @@
 
             <div>
             <label for="address">Alamat Lengkap</label><br>
-            <input style="width: 100%;"   type="text" id="address" name = "address" value="<?php echo 'Kp. Mauk Utara RT.002/001'?>" placeholder="Masukkan Alamat Lengkap" required>
+            <input style="width: 100%;"   type="text" id="address" name = "address" value="<?php echo $row['address'];?>" placeholder="Masukkan Alamat Lengkap" required>
             <br>
             <br>
             </div>
 
             <div>
-            <label for="avatar">Unggah Foto</label><br>
+            <label for="avatar">Unggah Fhoto</label><br>
             <input style="width: 100%" type="file" id="avatar" name = "avatar" required>
             <br>
             <br>
