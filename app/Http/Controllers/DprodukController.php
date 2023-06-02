@@ -10,12 +10,12 @@ class DprodukController extends Controller
     public function index() {
 
         $dproduk= Dproduk::all();
-        return view ('tugaspert24.dproduk', compact('dproduk'));
+        return view ('tugas_24.dproduk', compact('dproduk'));
     } 
 
     public function create() {
         
-        return view ('tugaspert24.dproduk_create');
+        return view ('tugas_24.dproduk_create');
     } 
 
     public function store(Request $request) {
@@ -33,7 +33,7 @@ class DprodukController extends Controller
 
         $dproduk= Dproduk::where('id', $id)->first();
         
-        return view ('tugaspert24.dproduk_edit', compact('dproduk'));
+        return view ('tugas_24.dproduk_edit', compact('dproduk'));
     } 
 
     public function update(Request $request) {

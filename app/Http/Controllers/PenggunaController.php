@@ -10,12 +10,12 @@ class PenggunaController extends Controller
     public function index() {
 
         $pengguna= Pengguna::all();
-        return view ('tugaspert24.pengguna', compact('pengguna'));
+        return view ('tugas_24.pengguna', compact('pengguna'));
     } 
 
     public function create() {
         
-        return view ('tugaspert24.pengguna_create');
+        return view ('tugas_24.pengguna_create');
     } 
 
     public function store(Request $request) {
@@ -33,7 +33,7 @@ class PenggunaController extends Controller
 
         $pengguna= Pengguna::where('id', $id)->first();
         
-        return view ('tugaspert24.pengguna_edit', compact('pengguna'));
+        return view ('tugas_24.pengguna_edit', compact('pengguna'));
     }
 
     public function update(Request $request) {

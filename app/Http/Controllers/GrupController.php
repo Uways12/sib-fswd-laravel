@@ -10,12 +10,12 @@ class GrupController extends Controller
     public function index() {
 
         $grup= Grup::all();
-        return view ('tugaspert24.grup', compact('grup'));
+        return view ('tugas_24.grup', compact('grup'));
     } 
 
     public function create() {
         
-        return view ('tugaspert24.grup_create');
+        return view ('tugas_24.grup_create');
     } 
 
     public function store(Request $request) {
@@ -33,7 +33,7 @@ class GrupController extends Controller
 
         $grup= Grup::where('id', $id)->first();
         
-        return view ('tugaspert24.grup_edit', compact('grup'));
+        return view ('tugas_24.grup_edit', compact('grup'));
     } 
 
     public function update(Request $request) {

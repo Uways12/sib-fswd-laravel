@@ -22,7 +22,7 @@ class ProdukController extends Controller
     ];
 
 
-    return view ('tugaspert23.landing', compact('namamhs', 'deskripsi' ));
+    return view ('tugas_23.landing', compact('namamhs', 'deskripsi' ));
     return view ('master.product', compact('nama' ));
 
         
@@ -61,7 +61,7 @@ class ProdukController extends Controller
     
     
     
-    return view('tugaspert23.dashboard', compact('kategori', 'produk', 'pengguna'));
+    return view('tugas_23.dashboard', compact('kategori', 'produk', 'pengguna'));
 
         
     }
